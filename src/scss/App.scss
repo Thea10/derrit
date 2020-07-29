@@ -1,9 +1,7 @@
-.App {
-  text-align: center;
-}
+@import "./variables.scss";
 
 .App-logo {
-  height: 40vmin;
+  height: 100px;
   pointer-events: none;
 }
 
@@ -35,5 +33,12 @@
   }
   100% {
     transform: translateY(0px)
+  }
+}
+
+body{
+  .alert{
+    color: $primary;
+    font-size: 80%;
   }
 }

@@ -1,0 +1,62 @@
+@import "../../scss/variables.scss";
+
+
+.container-fluid{
+    .group-name{
+        color: $primary;
+        text-transform: uppercase;
+    }
+    .btn{
+        border: 1px solid #e3757559;
+        padding: .3rem;
+        font-size: 0.7rem;
+        line-height: 0;
+        border-radius: 1rem;
+    }
+    .row{
+        //height: 200px;
+        .main-post{
+              box-shadow: 0 0 2px 1px rgba(188, 24, 35, 0.86);
+            border-radius: 5px;
+           // height: 200px;
+            
+
+            .img-section{
+              //  border: 1px solid $primary;
+              margin: auto;
+
+                img{
+                   // height: 100%;
+                    margin: 1rem auto;
+                   
+
+                    @include md-min{
+                        width: inherit;
+                    }
+                }
+            }
+
+            .extra-details{
+                 color: $primary;
+                 padding: 15px;
+                 a{
+                    color: $primary;
+                }
+
+                h6{
+                    font-size: 80%;
+                }
+
+                .actions{
+                    >*{
+                        margin-top: 1rem;
+                    }
+                    @include md-min{
+                        margin-top: 9rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}
