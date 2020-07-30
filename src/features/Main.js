@@ -58,10 +58,10 @@ class Main extends Component {
         return post.subreddit.toLowerCase().includes(searchField.toLowerCase())  && new Date(post.created_utc * 1000).getDay() === new Date(filterDateSearch).getDay();      
       } else if ( searchField && filterSearchField ) { 
     
-        return post.subreddit.toLowerCase().includes(searchField.toLowerCase()) && post.ups === filterSearchField;
+        return post.subreddit.toLowerCase().includes(searchField.toLowerCase()) && filterSearchField.toString() === post.ups.toString();
         
       }  else if ( searchField && filterSearchField && filterDateSearch){
-          return  post.subreddit.toLowerCase().includes(searchField.toLowerCase()) && post.ups === filterSearchField  && new Date(post.created_utc * 1000).getDay() === new Date(filterDateSearch).getDay();      
+          return  post.subreddit.toLowerCase().includes(searchField.toLowerCase()) && filterSearchField.toString() === post.ups.toString()  && new Date(post.created_utc * 1000).getDay() === new Date(filterDateSearch).getDay();      
       } else if ( ( searchField && !filterSearchField && !filterDateSearch)){
         return  post.subreddit.toLowerCase().includes(searchField.toLowerCase())
       } return post 
